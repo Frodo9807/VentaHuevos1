@@ -9,17 +9,13 @@
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
             <th>Nombre</th>
-            <th>PROFESOR</th>
-            <th>HORAS_SEMANA</th>
-            <th>DIAS_SEAMANA</th>
+            <th>CANTIDAD</th>
 
         </tr>
     </thead>
     <tbody>
         <tr th:each="articulo : ${articulos}">
-            <td th:text="${articulo.id}"></td>
             <td th:text="${articulo.articulo}"></td>
             <td th:text="${articulo.cantidad}" ></td>
            

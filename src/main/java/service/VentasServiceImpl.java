@@ -14,13 +14,13 @@ import rest.VentasService;
 
 
 @Service
-@Transactional
 public class VentasServiceImpl implements VentasService{
     @Autowired
     private VentaRepository data;
     
 
     @Override
+    @Transactional
     public List<Venta>listar(){
         List <Venta> listaVentas = (List<Venta>) data.findAll();
         return listaVentas;
@@ -28,6 +28,7 @@ public class VentasServiceImpl implements VentasService{
 
 
 	@Override
+	@Transactional
 	public Optional<Venta> listarId(int id) {
 		// TODO Auto-generated method stub
 		return null;
@@ -35,6 +36,7 @@ public class VentasServiceImpl implements VentasService{
 
 
 	@Override
+	@Transactional
 	public int save(Venta e) {
 		// TODO Auto-generated method stub
 		return 0;
@@ -42,6 +44,7 @@ public class VentasServiceImpl implements VentasService{
 
 
 	@Override
+	@Transactional
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		
