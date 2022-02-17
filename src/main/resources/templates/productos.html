@@ -33,11 +33,11 @@
             <input type="text" id="null">
             <div class="container" >
             <div class="row" th:each="articulo : ${articulos}">
-            <div class="col-sm" th:text="'Huevos'+ ${articulo.nombre}">
             <input type="hidden" th:field="*{id}" >
+            <label th:text="'Huevos'+ ${articulo.nombre}"></label>
             <input type="number" th:field="*{cantidad}" min="1" th:max="${articulo.cantidad}">
             
-            </div>
+            
             </div>
             </div>
             <input type="submit" value="Guardar">
